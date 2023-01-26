@@ -1,0 +1,30 @@
+name: develop deploy CI
+
+on:
+ push:
+   branches: [release/develop]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install & Build
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.3.10'
+          channel: 'stable'
+        run: |
+          flutter config --enable-web
+          flutter pub get
+          flutter build web --release
+
+      - name: Deploy
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ap-northeast-2
+        run: aws s3 async build/web s3://dev-ideal-type-world-cup --acl public-read

@@ -12,11 +12,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Install & Build
-        uses: subosito/flutter-action@v2
+      - uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.3.10'
           channel: 'stable'
+
+      - name: Install & Build
         run: |
           flutter config --enable-web
           flutter pub get
@@ -27,4 +28,4 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ap-northeast-2
-        run: aws s3 async build/web s3://dev-ideal-type-world-cup --acl public-read
+        run: aws s3 sync build/web s3://dev-ideal-type-world-cup

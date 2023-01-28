@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ideal_type_world_cup/ui/home/home_controller.dart';
+import 'package:ideal_type_world_cup/ui/home/views/home_app_bar_view.dart';
+import 'package:ideal_type_world_cup/ui/home/views/home_list_view.dart';
 
-class HomePage extends GetView {
+class HomePage extends GetView<HomeController> {
   static const routeName = '/home';
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: const Text('이상형 월드컵'),
-      ),
-      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-      body: const SafeArea(
-        child: Text('Home'),
+      appBar: HomeAppBarView(),
+      body: SafeArea(
+        child: HomeListView(),
       ),
     );
   }

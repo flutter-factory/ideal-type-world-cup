@@ -7,6 +7,8 @@ class RankingPage extends GetView {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return SizedBox(
+      child: Center(child: Text('This is ${Get.parameters}')),
+    );
   }
 }

@@ -1,0 +1,1 @@
+export 'ideal_type_world_cup.dart';

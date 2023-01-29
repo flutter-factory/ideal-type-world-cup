@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
           blendOnColors: false,
         ),
         visualDensity: FlexColorScheme.comfortablePlatformDensity,
-        fontFamily: 'NotoSansKr',
+        fontFamily: 'NotoSansKR',
       ),
       darkTheme: FlexThemeData.dark(
         scheme: FlexScheme.bigStone,

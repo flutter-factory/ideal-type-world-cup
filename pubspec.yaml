@@ -60,15 +60,15 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
-  # To add assets to your application, add an assets section, like this:
+  # To add lib/assets to your application, add an lib/assets section, like this:
   assets:
-    - assets/images/trophy.png
+    - lib/assets/images/trophy.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
-  # https://flutter.dev/assets-and-images/#resolution-aware
+  # https://flutter.dev/lib/assets-and-images/#resolution-aware
 
-  # For details regarding adding assets from package dependencies, see
-  # https://flutter.dev/assets-and-images/#from-packages
+  # For details regarding adding lib/assets from package dependencies, see
+  # https://flutter.dev/lib/assets-and-images/#from-packages
 
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a
@@ -76,19 +76,19 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: NotoSansKr
+    - family: NotoSansKR
       fonts:
-        - asset: assets/fonts/Noto_Sans_KR/NotoSansKr-Black.otf
+        - asset: lib/assets/fonts/Noto_Sans_KR/NotoSansKR-Black.otf
           weight: 900
-        - asset: assets/fonts/Noto_Sans_KR/NotoSansKr-Bold.otf
+        - asset: lib/assets/fonts/Noto_Sans_KR/NotoSansKR-Bold.otf
           weight: 700
-        - asset: assets/fonts/Noto_Sans_KR/NotoSansKr-Medium.otf
+        - asset: lib/assets/fonts/Noto_Sans_KR/NotoSansKR-Medium.otf
           weight: 500
-        - asset: assets/fonts/Noto_Sans_KR/NotoSansKr-Regular.otf
+        - asset: lib/assets/fonts/Noto_Sans_KR/NotoSansKR-Regular.otf
           weight: 400
-        - asset: assets/fonts/Noto_Sans_KR/NotoSansKr-Light.otf
+        - asset: lib/assets/fonts/Noto_Sans_KR/NotoSansKR-Light.otf
           weight: 300
-        - asset: assets/fonts/Noto_Sans_KR/NotoSansKr-Thin.otf
+        - asset: lib/assets/fonts/Noto_Sans_KR/NotoSansKR-Thin.otf
           weight: 100
 
   # For details regarding fonts from package dependencies,

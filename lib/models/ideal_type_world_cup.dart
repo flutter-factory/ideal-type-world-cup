@@ -1,3 +1,8 @@
+import 'package:json_annotation/json_annotation.dart';
+
+part 'ideal_type_world_cup.g.dart';
+
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class IdealTypeWorldCup {
   int? idealTypeWorldCupId;
   String? title;
@@ -6,30 +11,21 @@ class IdealTypeWorldCup {
   String? thumbnailUrl;
 
   IdealTypeWorldCup(
-      {this.idealTypeWorldCupId,
-        this.title,
-        this.description = '',
-        this.worldCupStatus,
-        this.thumbnailUrl,
-      });
+    this.idealTypeWorldCupId,
+    this.title,
+    this.description,
+    this.worldCupStatus,
+    this.thumbnailUrl,
+  );
 
-  IdealTypeWorldCup.fromJson(Map<String, dynamic> json) {
-    idealTypeWorldCupId = json['idealTypeWorldCupId'];
-    title = json['title'];
-    description = json['description'];
-    worldCupStatus = json['worldCupStatus'];
-    thumbnailUrl = json['thumbnailUrl'];
-  }
+  factory IdealTypeWorldCup.fromJsonModel(Object? json) =>
+      IdealTypeWorldCup.fromJson(json as Map<String, dynamic>);
+  static Map<String, dynamic> toJsonModel(IdealTypeWorldCup worldCup) =>
+      worldCup.toJson();
 
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = <String, dynamic>{};
-    data['idealTypeWorldCupId'] = idealTypeWorldCupId;
-    data['title'] = title;
-    data['description'] = description;
-    data['worldCupStatus'] = worldCupStatus;
-    data['thumbnailUrl'] = thumbnailUrl;
-    return data;
-  }
+  factory IdealTypeWorldCup.fromJson(Map<String, dynamic> json) =>
+      _$IdealTypeWorldCupFromJson(json);
+  Map<String, dynamic> toJson() => _$IdealTypeWorldCupToJson(this);
 
   @override
   String toString() {

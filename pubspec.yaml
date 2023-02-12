@@ -57,7 +57,7 @@ flutter:
 
   # To add lib/assets to your application, add an lib/assets section, like this:
   assets:
-    - lib/assets/images/trophy.png
+    - assets/images/trophy.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/lib/assets-and-images/#resolution-aware
@@ -73,17 +73,17 @@ flutter:
   fonts:
     - family: NotoSansKR
       fonts:
-        - asset: lib/assets/fonts/Noto_Sans_KR/NotoSansKR-Black.otf
+        - asset: assets/fonts/Noto_Sans_KR/NotoSansKR-Black.otf
           weight: 900
-        - asset: lib/assets/fonts/Noto_Sans_KR/NotoSansKR-Bold.otf
+        - asset: assets/fonts/Noto_Sans_KR/NotoSansKR-Bold.otf
           weight: 700
-        - asset: lib/assets/fonts/Noto_Sans_KR/NotoSansKR-Medium.otf
+        - asset: assets/fonts/Noto_Sans_KR/NotoSansKR-Medium.otf
           weight: 500
-        - asset: lib/assets/fonts/Noto_Sans_KR/NotoSansKR-Regular.otf
+        - asset: assets/fonts/Noto_Sans_KR/NotoSansKR-Regular.otf
           weight: 400
-        - asset: lib/assets/fonts/Noto_Sans_KR/NotoSansKR-Light.otf
+        - asset: assets/fonts/Noto_Sans_KR/NotoSansKR-Light.otf
           weight: 300
-        - asset: lib/assets/fonts/Noto_Sans_KR/NotoSansKR-Thin.otf
+        - asset: assets/fonts/Noto_Sans_KR/NotoSansKR-Thin.otf
           weight: 100
 
   # For details regarding fonts from package dependencies,
